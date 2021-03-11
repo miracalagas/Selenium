@@ -1,4 +1,4 @@
-import time
+
 
 from selenium import webdriver
 from AmazonPom.Pages.login_page import LoginPage
@@ -10,6 +10,17 @@ import unittest
 
 
 class TestAmazon(unittest.TestCase):
+    """Test case is:
+    1. Go to website
+    2. Click login page button
+    3. Try to logged in
+    4. Search "samsung" on site
+    5. Search third product result of search
+    6. Add product to wishlist
+    7. Go to wishlist
+    8. Delete items from wishlist
+    9. Tear down
+    """
 
     @classmethod
     def setUpClass(self):
