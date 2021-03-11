@@ -3,7 +3,6 @@ from AmazonPom.base_page.base_page import BasePage
 
 
 class ProductPage(BasePage):
-
     """ Add to wishlist """
 
     ADD_TO_LIST_BTN = (By.ID, "add-to-wishlist-button-submit")

@@ -3,7 +3,6 @@ from AmazonPom.base_page.base_page import BasePage
 
 
 class CategoryPage(BasePage):
-
     """Select the third product from the category page"""
 
     NEXT_PAGE = (By.CSS_SELECTOR, "[class='a-last']")
@@ -15,7 +14,7 @@ class CategoryPage(BasePage):
         super().__init__(driver)
 
     def next_page(self):
-        """go to the second category page"""
+        """Go to the second category page"""
         self.wait_for_element(self.NEXT_PAGE).click()
 
     def select_third_product(self):

@@ -3,10 +3,9 @@ from AmazonPom.base_page.base_page import BasePage
 
 
 class LoginPage (BasePage):
-
     """Do login process in login page"""
 
-    Mail = "miracalagas1@gmail.com"
+    Mail = "***"
     password = "***"
 
     LOGIN_BTN = (By.ID, "nav-link-accountList-nav-line-1")
@@ -20,9 +19,7 @@ class LoginPage (BasePage):
         super().__init__(driver)
 
     def login(self):
-
         """Enter your mail and password and login in """
-
         self.wait_for_element(self.LOGIN_BTN).click()
         self.wait_for_element(self.EMAIL_LOCATOR).send_keys(self.Mail)
         self.wait_for_elements(self.CONTINUE_BTN)[1].click()

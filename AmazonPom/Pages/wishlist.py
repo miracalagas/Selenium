@@ -4,8 +4,7 @@ from AmazonPom.base_page.base_page import BasePage
 
 
 class Wishlist(BasePage):
-
-    """delete the product in wishlist"""
+    """Delete the product in wishlist"""
 
     HOVER_WISHLIST = (By.ID, "nav-link-accountList-nav-line-1")
     WISHLIST_BTN = (By.CLASS_NAME, "nav-panel")
@@ -18,9 +17,7 @@ class Wishlist(BasePage):
         super().__init__(driver)
 
     def delete_wishlist(self):
-
         """To delete the product in wishlist and confirm that it has been deleted"""
-
         self.hover(self.HOVER_WISHLIST)
         self.wait_for_element(self.WISHLIST_BTN).click()
         try:
